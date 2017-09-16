@@ -1,0 +1,5 @@
+#VirtualEnv
+env/
+
+#SoundFont Files
+*.sf2

@@ -11,7 +11,7 @@ c->B
 z->A#
 ```
 
-where 'z' ends up on ```A#-6```, the A-sharp above middle-C. The program plays one chord at a time (by default it plays a single note based on only the first letter).
+where 'z' ends up on ```A#-6```, the A-sharp above middle-C (```B-6``` is used for non-alphabetical characters). The program plays one chord at a time (by default it plays a single note based on only the first letter).
 
 To extend this program, the [natural language processing toolkit](http://www.nltk.org/) for python could be employed to find rhythms in the text, rather than playing each note with the same time interval. And a better mapping might be found based on the meaning of words rather than just the letters which compose it.
 

@@ -58,6 +58,6 @@ tempo=args.tempo
 #=========================================================================
 
 for word in text.split():
-  nc = NoteContainer([ letter_map[letter.lower()] for letter in word[:chord] ])
+  nc = NoteContainer( map(lambda char: letter_map[char.lower()] if char.lower() in letter_map.keys() else "B-6", word[:chord]) )
   fluidsynth.play_NoteContainer(nc)
   sleep(tempo)

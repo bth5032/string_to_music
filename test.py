@@ -49,6 +49,14 @@ letter_map = {
 
 tempo=args.tempo
 
+#====================Notes For Clay=======================================
+# If you want to extend, you should probably do two things...
+# First, you can change how long the pause is between notes by multiplying the variable tempo by something like the count of the number of letters in the word
+# Second, you can stop notes from playing by using stop_NoteContainer(nc)
+# Third, you can look into the Natural Language Toolkit to see if you can find a better way to map words into notes/chords: http://www.nltk.org/
+# Have fun!
+#=========================================================================
+
 for word in text.split():
   nc = NoteContainer([ letter_map[letter.lower()] for letter in word[:chord] ])
   fluidsynth.play_NoteContainer(nc)

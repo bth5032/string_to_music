@@ -46,6 +46,7 @@ letter_map = {
 "y": "A-6",
 "z": "A#-6",
 }
+lm = lambda char: letter_map[char.lower()] if char.lower() in letter_map.keys() else "B-6"
 
 tempo=args.tempo
 
@@ -58,6 +59,6 @@ tempo=args.tempo
 #=========================================================================
 
 for word in text.split():
-  nc = NoteContainer( map(lambda char: letter_map[char.lower()] if char.lower() in letter_map.keys() else "B-6", word[:chord]) ) #This line you won't understand Clay, but I can explain if you are interested in playing
+  nc = NoteContainer( map(lm , word[:chord]) ) #This line you won't understand Clay, but I can explain if you are interested in playing
   fluidsynth.play_NoteContainer(nc)
   sleep(tempo)
